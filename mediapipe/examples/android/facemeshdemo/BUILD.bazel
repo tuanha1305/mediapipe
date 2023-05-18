@@ -1,0 +1,7 @@
+android_library(
+    name = "facemesh",
+    srcs = glob(["**/*.java"]),
+    visibility = ["//visibility:public"],
+    resource_files = glob(["**/*.jpg", "**/*.png"]),
+    plugins = [        "//mediapipe/java/com/google/mediapipe/apps/facemeshdemo:mediapipe_java_plugin",        "//mediapipe/framework:mediapipe_java",        "//mediapipe/calculators:face_geometry_calculator",        "//mediapipe/calculators:landmark_list_to_vector_calculator",        "//mediapipe/calculators:image_transformation_calculator",        "//mediapipe/calculators:image_cropping_calculator",        "//mediapipe/calculators:vector_to_render_annotation_calculator",        "//mediapipe/calculators:render_annotator_calculator",        "//mediapipe/graphs/facemesh/facemesh_desktop_tflite_gpu.pb",        "//mediapipe/graphs/facemesh/facemesh_desktop_tflite_gpu.pbtxt",        "//mediapipe/graphs/facemesh/facemesh_android_cpu.pb",        "//mediapipe/graphs/facemesh/facemesh_android_cpu.pbtxt",        "//mediapipe/modules:face_geometry",        "//mediapipe/modules:landmark_list_to_vector",        "//mediapipe/modules:image_transformation",        "//mediapipe/modules:image_cropping",        "//mediapipe/modules:vector_to_render_annotation",        "//mediapipe/modules:render_annotator",    ],
+)

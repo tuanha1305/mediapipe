@@ -21,6 +21,7 @@ bazel_skylib_workspace()
 load("@bazel_skylib//lib:versions.bzl", "versions")
 versions.check(minimum_bazel_version = "3.7.2")
 
+
 # ABSL cpp library lts_2023_01_25.
 http_archive(
     name = "com_google_absl",
